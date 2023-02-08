@@ -3,8 +3,41 @@
     <v-container>
       <v-row>
         <v-col>
-          <v-sheet min-height="30vh" rounded="lg" class="file-view">
-            <!--  -->
+          <v-sheet rounded="lg" class="file-view">
+            <v-row class="pa-2 pb-2 align-center">
+              <v-col cols="1">
+                <v-avatar size="30">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/14945414?v=4"
+                  />
+                </v-avatar>
+              </v-col>
+              <v-col class="text-start lgrey" cols="1">
+                <v-row>
+                  <h4>bernstern</h4>
+                </v-row>
+              </v-col>
+            </v-row>
+            <v-divider />
+            <template v-for="n in files" :key="n">
+              <v-row class="pl-4 pa-2 pb-2 align-center">
+                <v-col class="text-start lgrey" cols="4">
+                  <v-row>
+                    <v-icon class="pr-2 pl-2">{{ n.icon }}</v-icon>
+                    <v-col class="pl-4">
+                      <v-row>
+                        <h4>{{ n.name }}</h4>
+                      </v-row>
+                    </v-col>
+                  </v-row>
+                </v-col>
+                <v-col class="text-start dgrey" cols="4">{{ n.commit }}</v-col>
+                <v-col class="text-end dgrey pr-8" cols="4">{{
+                  n.last_modified
+                }}</v-col>
+              </v-row>
+              <v-divider />
+            </template>
           </v-sheet>
         </v-col>
         <v-col cols="3">
@@ -74,6 +107,9 @@
 .dgrey {
   color: #758390;
 }
+.mgrey {
+  background-color: #2d333b;
+}
 </style>
 
 <script>
@@ -100,6 +136,29 @@ export default {
           username: "mepix",
           image: "https://avatars.githubusercontent.com/u/13284555?v=4",
           name: "Merrick Campbell",
+        },
+      ],
+      files: [
+        {
+          name: "resume.pdf",
+          icon: "mdi-file-document-outline",
+          commit: "Added resume, LGTM!",
+          last_modified: "1 Month Ago",
+          link: "TODO",
+        },
+        {
+          name: "resume.pdf",
+          icon: "mdi-file-document-outline",
+          commit: "Added resume, LGTM!",
+          last_modified: "1 Month Ago",
+          link: "TODO",
+        },
+        {
+          name: "resume.pdf",
+          icon: "mdi-file-document-outline",
+          commit: "Added resume, LGTM!",
+          last_modified: "1 Month Ago",
+          link: "TODO",
         },
       ],
     };
