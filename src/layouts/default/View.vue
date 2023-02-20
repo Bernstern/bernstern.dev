@@ -17,7 +17,7 @@
                         <h4>bernstern</h4></a
                       >
                       <p class="pl-1 d-none d-sm-flex">
-                        Fixed bugs with deployment
+                        Removed left-pad from dependencies
                       </p>
                     </v-row>
                   </v-row>
@@ -42,10 +42,10 @@
                 <v-col class="text-start lgrey">
                   <v-row class="align-baseline pl-4">
                     <v-icon class="pr-2">{{ n.icon }}</v-icon>
-                    <p class="">{{ n.name }}</p>
+                    <a :href="n.link">{{ n.name }}</a>
                   </v-row>
                 </v-col>
-                <v-col class="text-start dgrey d-none d-sm-flex" cols="4">
+                <v-col class="text-start dgrey d-none d-sm-flex" cols="6">
                   {{ n.commit }}
                 </v-col>
                 <v-col class="text-end dgrey pr-8">{{ n.last_modified }}</v-col>
@@ -53,15 +53,6 @@
               <v-divider />
             </template>
           </v-sheet>
-          <!-- <v-sheet rounded="lg m" class="fileview">
-            <v-banner
-              lines="two"
-              icon="mdi-format-list-bulleted"
-              color="#2d333b"
-            >
-              Test
-            </v-banner>
-          </v-sheet> -->
         </v-col>
         <v-col cols="12" sm="3">
           <v-sheet rounded="lg" color="background">
@@ -193,60 +184,82 @@ export default {
       },
       files: [
         {
-          name: "resume.pdf",
+          name: "Resume.pdf",
           icon: "mdi-file-document-outline",
-          commit: "Added resume, pretty sure there's no typos...",
+          commit: "Added resume, pretty sure there are no typos...",
           last_modified: "2 Weeks Ago",
-          link: "TODO",
+          link: "https://github.com/Bernstern/bernstern.dev/blob/main/content/resume.pdf",
         },
         {
-          name: "resume.pdf",
-          icon: "mdi-file-document-outline",
-          commit: "Added resume, LGTM!",
-          last_modified: "1 Month Ago",
-          link: "TODO",
+          name: "Allthenticate Passwordless",
+          icon: "mdi-application-braces-outline",
+          commit:
+            "Lead the development of single device authentication on Linux, MacOS and Windows using Rust, C++ and Python",
+          last_modified: "Today",
+          link: "https://allthenticate.net/authentication",
         },
         {
-          name: "resume.pdf",
-          icon: "mdi-file-document-outline",
-          commit: "Added resume, LGTM!",
-          last_modified: "1 Month Ago",
-          link: "TODO",
+          name: "Allthenticate Door Readers",
+          icon: "mdi-application-braces-outline",
+          commit:
+            "Developed the firmware for Allthenticate's smart door readers with authenitcation over BLE",
+          last_modified: "Today",
+          link: "https://allthenticate.net/access-control",
         },
         {
-          name: "resume.pdf",
-          icon: "mdi-file-document-outline",
-          commit: "Added resume, LGTM!",
-          last_modified: "1 Month Ago",
-          link: "TODO",
+          name: "ABle",
+          icon: "mdi-package-variant",
+          commit:
+            "Created a high performance async cross-platform bluetooth low energy framework at Allthenticate",
+          last_modified: "2 Years Ago",
+          link: "https://pypi.org/project/able/",
         },
         {
-          name: "resume.pdf",
-          icon: "mdi-file-document-outline",
-          commit: "Added resume, LGTM!",
-          last_modified: "1 Month Ago",
-          link: "TODO",
+          name: "CVE 2021-43400",
+          icon: "mdi-bug-check-outline",
+          commit:
+            "Found and fixed ause after free of a function pointer in Bluez, the linux bluetooth driver",
+          last_modified: "2 years ago",
+          link: "https://nvd.nist.gov/vuln/detail/CVE-2021-43400",
         },
         {
-          name: "resume.pdf",
-          icon: "mdi-file-document-outline",
-          commit: "Added resume, LGTM!",
-          last_modified: "1 Month Ago",
-          link: "TODO",
+          name: "TheCivDraft",
+          icon: "mdi-application-braces-outline",
+          commit:
+            "Created a Flutter app to manage a full reverse snake draft for Civ 6 for LAN parties",
+          last_modified: "Last Year",
+          link: "https://github.com/Bernstern/TheCivDraft",
         },
         {
-          name: "resume.pdf",
-          icon: "mdi-file-document-outline",
-          commit: "Added resume, LGTM!",
-          last_modified: "1 Month Ago",
-          link: "TODO",
+          name: "Bowlmania Bot",
+          icon: "mdi-application-braces-outline",
+          commit:
+            "Trained a Transformer + Naive Bayes Classifier to predict the winners of the 2022 College Bowl Games off of the last 10 years of data, almost won...",
+          last_modified: "2 Months Ago",
+          link: "https://github.com/Bernstern/Bowlmania22",
         },
         {
-          name: "resume.pdf",
-          icon: "mdi-file-document-outline",
-          commit: "Added resume, LGTM!",
+          name: "MagicRSVP",
+          icon: "mdi-application-braces-outline",
+          commit:
+            "Created a Python tool to RSVP hard-to-get Disneyland dining reservations",
           last_modified: "1 Month Ago",
-          link: "TODO",
+          link: "https://github.com/Bernstern/MagicRSVP",
+        },
+        {
+          name: "Research ChatBot",
+          icon: "mdi-application-braces-outline",
+          commit:
+            "Made a nextjs chatbot to help with a friends research project that used MongoDB",
+          last_modified: "2 years ago",
+          link: "https://github.com/Bernstern/pabs_research",
+        },
+        {
+          name: "AWS Cloud Practitioner Cert",
+          icon: "mdi-certificate",
+          commit: "Became an AWS Certified Cloud Practitioner",
+          last_modified: "3 Years Ago",
+          link: "https://www.credly.com/badges/949ac0c9-ccd9-47e3-b5fd-f6f4ddae2405/linked_in_profile",
         },
       ],
     };
