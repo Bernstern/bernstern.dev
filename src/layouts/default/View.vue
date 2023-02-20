@@ -12,8 +12,10 @@
                       size="30"
                       image="https://avatars.githubusercontent.com/u/14945414?v=4"
                     />
-                    <v-row class="align-baseline pl-2">
-                      <h4 class="pl-2">bernstern</h4>
+                    <v-row class="align-baseline pl-5">
+                      <a href="https://github.com/Bernstern">
+                        <h4>bernstern</h4></a
+                      >
                       <p class="pl-1 d-none d-sm-flex">
                         Fixed bugs with deployment
                       </p>
@@ -98,7 +100,11 @@
                     <v-avatar size="40" :image="contributor.image" />
                     <v-col class="ml-2">
                       <v-row>
-                        <h4>{{ contributor.username }}</h4>
+                        <a :href="contributor.profile">
+                          <h4>
+                            {{ contributor.username }}
+                          </h4>
+                        </a>
                         <h4 class="pl-2 dgrey">{{ contributor.name }}</h4>
                       </v-row>
                     </v-col>
@@ -116,6 +122,19 @@
 <style scoped>
 .tag-chip {
   color: #316dca;
+}
+
+a,
+a:link,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .file-view {
@@ -158,11 +177,13 @@ export default {
         {
           username: "cspensky",
           image: "https://avatars.githubusercontent.com/u/2789577?v=4",
+          profile: "https://github.com/cspensky",
           name: "Chad Spensky",
         },
         {
           username: "mepix",
           image: "https://avatars.githubusercontent.com/u/13284555?v=4",
+          profile: "https://github.com/mepix",
           name: "Merrick Campbell",
         },
       ],
