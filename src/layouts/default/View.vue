@@ -39,7 +39,7 @@
             <v-divider />
             <template v-for="n in files" :key="n">
               <v-row class="pl-4 pa-2 pb-2 align-center">
-                <v-col class="text-start lgrey">
+                <v-col class="text-start lgrey" cols="8" sm="4">
                   <v-row class="align-baseline pl-4">
                     <v-icon class="pr-2">{{ n.icon }}</v-icon>
                     <a :href="n.link">{{ n.name }}</a>
@@ -113,6 +113,10 @@
 <style scoped>
 .tag-chip {
   color: #316dca;
+}
+
+* {
+  text-overflow: ellipsis;
 }
 
 a,
@@ -255,7 +259,7 @@ export default {
           link: "https://github.com/Bernstern/pabs_research",
         },
         {
-          name: "AWS Cloud Practitioner Cert",
+          name: "AWS Cloud Practitioner",
           icon: "mdi-certificate",
           commit: "Became an AWS Certified Cloud Practitioner",
           last_modified: "3 Years Ago",
