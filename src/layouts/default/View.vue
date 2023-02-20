@@ -2,31 +2,43 @@
   <v-main>
     <v-container>
       <v-row>
-        <v-col>
+        <v-col cols="12" sm="9">
           <v-sheet rounded="lg" class="file-view">
-            <v-row class="pa-2 pb-2 align-center">
-              <v-col cols="1">
-                <v-avatar size="30">
-                  <img
-                    src="https://avatars.githubusercontent.com/u/14945414?v=4"
-                  />
-                </v-avatar>
-              </v-col>
-              <v-col class="text-start lgrey" cols="1">
-                <v-row>
-                  <h4>bernstern</h4>
-                </v-row>
-              </v-col>
-            </v-row>
+            <v-container class="mgreybg">
+              <v-row class="pa-2 align-center mgreybg">
+                <v-col class="text-start" cols="4">
+                  <v-row class="align-center mgrey">
+                    <v-avatar
+                      size="30"
+                      image="https://avatars.githubusercontent.com/u/14945414?v=4"
+                    />
+                    <v-row class="align-baseline pl-2">
+                      <h4 class="pl-2">bernstern</h4>
+                      <p class="pl-1">Fixed bugs with deployment</p>
+                    </v-row>
+                  </v-row>
+                </v-col>
+                <v-col cols="4" />
+                <v-col cols="4">
+                  <v-row class="justify-end align-baseline">
+                    <v-icon class="lgreen">mdi-check</v-icon>
+                    <p class="dgrey pr-4">3133337 on Jun 15, 2022</p>
+                    <v-icon class="pr-2">mdi-history</v-icon>
+                    <h4>21</h4>
+                    <p class="dgrey pl-1">commits</p>
+                  </v-row>
+                </v-col>
+              </v-row>
+            </v-container>
             <v-divider />
             <template v-for="n in files" :key="n">
               <v-row class="pl-4 pa-2 pb-2 align-center">
                 <v-col class="text-start lgrey" cols="4">
                   <v-row>
-                    <v-icon class="pr-2 pl-2">{{ n.icon }}</v-icon>
-                    <v-col class="pl-4">
+                    <v-icon class="pr-2 pl-6">{{ n.icon }}</v-icon>
+                    <v-col class="pl-6">
                       <v-row>
-                        <h4>{{ n.name }}</h4>
+                        {{ n.name }}
                       </v-row>
                     </v-col>
                   </v-row>
@@ -39,8 +51,17 @@
               <v-divider />
             </template>
           </v-sheet>
+          <!-- <v-sheet rounded="lg m" class="fileview">
+            <v-banner
+              lines="two"
+              icon="mdi-format-list-bulleted"
+              color="#2d333b"
+            >
+              Test
+            </v-banner>
+          </v-sheet> -->
         </v-col>
-        <v-col cols="3">
+        <v-col cols="12" sm="3">
           <v-sheet rounded="lg" color="background">
             <v-col class="lgrey">
               <v-row class="ma-2">
@@ -74,9 +95,7 @@
               >
                 <v-col class="ma-2">
                   <v-row align="center" justify="center">
-                    <v-avatar size="40">
-                      <img :src="contributor.image" />
-                    </v-avatar>
+                    <v-avatar size="40" :image="contributor.image" />
                     <v-col class="ml-2">
                       <v-row>
                         <h4>{{ contributor.username }}</h4>
@@ -98,8 +117,12 @@
 .tag-chip {
   color: #316dca;
 }
+
 .file-view {
-  border: 1px solid #75838e;
+  border: 2px solid #454c56;
+}
+.lgreen {
+  color: #57ab5a;
 }
 .lgrey {
   color: #9cbbc8;
@@ -108,6 +131,11 @@
   color: #758390;
 }
 .mgrey {
+  background-color: #2d333b;
+  color: #acbac7;
+}
+
+.mgreybg {
   background-color: #2d333b;
 }
 </style>
@@ -138,7 +166,53 @@ export default {
           name: "Merrick Campbell",
         },
       ],
+      readme: {
+        title: "Career",
+        main_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+      },
       files: [
+        {
+          name: "resume.pdf",
+          icon: "mdi-file-document-outline",
+          commit: "Added resume, LGTM!",
+          last_modified: "1 Month Ago",
+          link: "TODO",
+        },
+        {
+          name: "resume.pdf",
+          icon: "mdi-file-document-outline",
+          commit: "Added resume, LGTM!",
+          last_modified: "1 Month Ago",
+          link: "TODO",
+        },
+        {
+          name: "resume.pdf",
+          icon: "mdi-file-document-outline",
+          commit: "Added resume, LGTM!",
+          last_modified: "1 Month Ago",
+          link: "TODO",
+        },
+        {
+          name: "resume.pdf",
+          icon: "mdi-file-document-outline",
+          commit: "Added resume, LGTM!",
+          last_modified: "1 Month Ago",
+          link: "TODO",
+        },
+        {
+          name: "resume.pdf",
+          icon: "mdi-file-document-outline",
+          commit: "Added resume, LGTM!",
+          last_modified: "1 Month Ago",
+          link: "TODO",
+        },
+        {
+          name: "resume.pdf",
+          icon: "mdi-file-document-outline",
+          commit: "Added resume, LGTM!",
+          last_modified: "1 Month Ago",
+          link: "TODO",
+        },
         {
           name: "resume.pdf",
           icon: "mdi-file-document-outline",

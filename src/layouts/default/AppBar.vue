@@ -1,11 +1,11 @@
 <template>
   <v-app-bar prominent color="background">
-    <v-container fluid class="align">
-      <v-row class="ml-1">
+    <v-container fluid>
+      <v-row class="ml-1 align-baseline">
         <v-icon class="mr-2 github-light-grey pa-2">mdi-book-outline</v-icon>
-        <h2 class="repository-title">Bernstern</h2>
+        <h2 class="repository-title">bernstern</h2>
         <h2 class="github-light-grey pl-2 pr-2">/</h2>
-        <h2 class="repository-title">Career</h2>
+        <h2 class="repository-title">career</h2>
         <v-chip color="github-light-grey" class="ml-2" x-large
           ><h4 class="github-light-grey">Public</h4></v-chip
         >
