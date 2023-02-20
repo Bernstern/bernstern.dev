@@ -14,18 +14,22 @@
                     />
                     <v-row class="align-baseline pl-2">
                       <h4 class="pl-2">bernstern</h4>
-                      <p class="pl-1">Fixed bugs with deployment</p>
+                      <p class="pl-1 d-none d-sm-flex">
+                        Fixed bugs with deployment
+                      </p>
                     </v-row>
                   </v-row>
                 </v-col>
                 <v-col cols="4" />
                 <v-col cols="4">
                   <v-row class="justify-end align-baseline">
-                    <v-icon class="lgreen">mdi-check</v-icon>
-                    <p class="dgrey pr-4">3133337 on Jun 15, 2022</p>
+                    <v-icon class="lgreen d-none d-sm-flex">mdi-check</v-icon>
+                    <p class="dgrey pr-4 d-none d-sm-flex">
+                      3133337 on Jun 15, 2022
+                    </p>
                     <v-icon class="pr-2">mdi-history</v-icon>
-                    <h4>21</h4>
-                    <p class="dgrey pl-1">commits</p>
+                    <h4 class="d-none d-sm-flex">21</h4>
+                    <p class="dgrey pl-1 d-none d-sm-flex">commits</p>
                   </v-row>
                 </v-col>
               </v-row>
@@ -33,20 +37,16 @@
             <v-divider />
             <template v-for="n in files" :key="n">
               <v-row class="pl-4 pa-2 pb-2 align-center">
-                <v-col class="text-start lgrey" cols="4">
-                  <v-row>
-                    <v-icon class="pr-2 pl-6">{{ n.icon }}</v-icon>
-                    <v-col class="pl-6">
-                      <v-row>
-                        {{ n.name }}
-                      </v-row>
-                    </v-col>
+                <v-col class="text-start lgrey">
+                  <v-row class="align-baseline pl-4">
+                    <v-icon class="pr-2">{{ n.icon }}</v-icon>
+                    <p class="">{{ n.name }}</p>
                   </v-row>
                 </v-col>
-                <v-col class="text-start dgrey" cols="4">{{ n.commit }}</v-col>
-                <v-col class="text-end dgrey pr-8" cols="4">{{
-                  n.last_modified
-                }}</v-col>
+                <v-col class="text-start dgrey d-none d-sm-flex" cols="4">
+                  {{ n.commit }}
+                </v-col>
+                <v-col class="text-end dgrey pr-8">{{ n.last_modified }}</v-col>
               </v-row>
               <v-divider />
             </template>
@@ -174,15 +174,8 @@ export default {
         {
           name: "resume.pdf",
           icon: "mdi-file-document-outline",
-          commit: "Added resume, LGTM!",
-          last_modified: "1 Month Ago",
-          link: "TODO",
-        },
-        {
-          name: "resume.pdf",
-          icon: "mdi-file-document-outline",
-          commit: "Added resume, LGTM!",
-          last_modified: "1 Month Ago",
+          commit: "Added resume, pretty sure there's no typos...",
+          last_modified: "2 Weeks Ago",
           link: "TODO",
         },
         {

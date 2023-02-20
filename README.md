@@ -1,57 +1,12 @@
-# base
+# bernstern.dev
 
-## Project setup
+Hi there, this is where the source for my portfolio site is kept. After seeing way too many portfolio sites designed off of the same 15 templates, I wanted to do something a little different. Often I view my own career and life to an extend as a series of decisions or commits so it felt natural to make a site that showed those commits and what better way to model that than Github.
 
-```
-# yarn
-yarn
+## Future Plans
 
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-### Compiles and hot-reloads for development
-
-```
-# yarn
-yarn dev
-
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-```
-
-### Compiles and minifies for production
-
-```
-# yarn
-yarn build
-
-# npm
-npm run build
-
-# pnpm
-pnpm build
-```
-
-### Lints and fixes files
-
-```
-# yarn
-yarn lint
-
-# npm
-npm run lint
-
-# pnpm
-pnpm lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://vitejs.dev/config/).
+- [ ] Add a ReadME to view at the root level
+- [ ] Add a built in viewer for any pdfs in the repo
+- [ ] Git Tree
+- [ ] Make sure mobile is properly supported
+- [ ] Make the dates for commits auto update
+- [ ] Move the content to a cdn
