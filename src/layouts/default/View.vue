@@ -6,7 +6,7 @@
           <v-sheet rounded="lg" class="file-view">
             <v-container class="mgreybg">
               <v-row class="pa-2 align-center mgreybg">
-                <v-col class="text-start" cols="4">
+                <v-col class="text-start">
                   <v-row class="align-center mgrey">
                     <v-avatar
                       size="30"
@@ -22,16 +22,15 @@
                     </v-row>
                   </v-row>
                 </v-col>
-                <v-col cols="4" />
-                <v-col cols="4">
+                <v-col cols="5">
                   <v-row class="justify-end align-baseline">
                     <v-icon class="lgreen d-none d-sm-flex">mdi-check</v-icon>
                     <p class="dgrey pr-4 d-none d-sm-flex">
                       3133337 on Jun 15, 2022
                     </p>
                     <v-icon class="pr-2">mdi-history</v-icon>
-                    <h4 class="d-none d-sm-flex">21</h4>
-                    <p class="dgrey pl-1 d-none d-sm-flex">commits</p>
+                    <h4 class="">21</h4>
+                    <p class="dgrey pl-1">commits</p>
                   </v-row>
                 </v-col>
               </v-row>
@@ -40,7 +39,7 @@
             <template v-for="n in files" :key="n">
               <v-row class="pl-4 pa-2 pb-2 align-center">
                 <v-col class="text-start lgrey" cols="8" sm="4">
-                  <v-row class="align-baseline pl-4">
+                  <v-row class="align-center pl-4">
                     <v-icon class="pr-2">{{ n.icon }}</v-icon>
                     <a :href="n.link">{{ n.name }}</a>
                   </v-row>
