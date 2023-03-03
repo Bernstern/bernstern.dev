@@ -52,6 +52,36 @@
               <v-divider />
             </template>
           </v-sheet>
+          <div  style="height: 3vh"></div>
+          <v-sheet rounded="lg" class="file-view">
+            <v-container class="lgrey">
+              <v-row class="pa-2 align-center ">
+                <v-icon class="pr-2 pl-2">mdi-file-document-outline</v-icon>
+                <p class="pl-1 d-none d-sm-flex">
+                  README.md
+                </p>
+              </v-row>
+            </v-container>
+            <v-divider />
+            <v-container class="lgrey pl-3">
+            <h1>
+              bernstern.dev
+            </h1>
+            <v-divider />
+            <div class="pa-2">
+            <template v-for="n in badges" :key="n">
+              <img :src="n" class="pl-1">
+            </template>
+            </div>
+              <h2>Welcome!</h2>
+              <p>This is my portfolio site, I am in the process of adding more features to it but feel free to take a look around during development. While most of my background is not working with web development, it's always fun to try a new challenge. </p>
+              <br/>
+              <p>I started programming in 4th grade taking summer python and html classes, immediately I was hooked on the ability to make just about anything I could think of with code. Now I am working on ridding the world of passwords, keys, and smart cards with Allthenticate, a cybersecurity startup out of Santa Barbara, CA. </p>
+              <!-- <v-divider/>
+              <h2>In Progress</h2>
+              <p>In my free time I have been learning Rust, reading up on how to manage technical teams, and constantly trying to improve my Python skills. </p> -->
+            </v-container>
+          </v-sheet>
         </v-col>
         <v-col cols="12" sm="3">
           <v-sheet rounded="lg" color="background">
@@ -189,7 +219,20 @@ export default {
         title: "Career",
         main_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
       },
+      badges: [
+        "https://img.shields.io/badge/deployment-passing-green?style=for-the-badge&logo=appveyor",
+        "https://img.shields.io/badge/issues-0_open-green?style=for-the-badge&logo=appveyor",
+        "https://img.shields.io/badge/passing_tests-0-red?style=for-the-badge&logo=appveyor",
+        // "https://github-readme-stats.vercel.app/api?username=bernstern&theme=blue-green"
+
+      ],
       files: [
+        {
+          name: "README.md",
+          icon: "mdi-file-document-outline",
+          commit: "Updated README.md",
+          last_modified: "1 Week Ago",
+        },
         {
           name: "Resume.pdf",
           icon: "mdi-file-document-outline",
@@ -198,18 +241,18 @@ export default {
           link: "https://github.com/Bernstern/bernstern.dev/blob/main/content/resume.pdf",
         },
         {
-          name: "Allthenticate's Passwordless Authentication",
+          name: "Passwordless",
           icon: "mdi-application-braces-outline",
           commit:
-            "Lead the development of single device authentication on Linux, MacOS and Windows using Rust, C++ and Python",
+            "Lead the development of single device authentication on Linux, MacOS and Windows using Rust, C++ and Python @ Allthenticate",
           last_modified: "Today",
           link: "https://allthenticate.net/authentication",
         },
         {
-          name: "Allthenticate's Smart Door Readers",
+          name: "Smart Door Readers",
           icon: "mdi-application-braces-outline",
           commit:
-            "Developed the firmware for Allthenticate's smart door readers with authenitcation over BLE",
+            "Developed the firmware for Allthenticate's smart door readers with authenitcation over BLE @ Allthenticate",
           last_modified: "Today",
           link: "https://allthenticate.net/access-control",
         },
