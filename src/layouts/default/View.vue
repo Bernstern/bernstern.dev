@@ -1,7 +1,7 @@
 <template>
   <v-main>
-    <v-container>
-      <v-row>
+    <v-container fluid class="align-center frame">
+      <v-row >
         <v-col cols="12" sm="9">
           <v-sheet rounded="lg" class="file-view">
             <v-container class="mgreybg">
@@ -151,6 +151,10 @@ a:hover {
 .mgreybg {
   background-color: #2d333b;
 }
+
+.frame {
+  width: 90%;
+}
 </style>
 
 <script>
@@ -194,7 +198,7 @@ export default {
           link: "https://github.com/Bernstern/bernstern.dev/blob/main/content/resume.pdf",
         },
         {
-          name: "Allthenticate Passwordless",
+          name: "Allthenticate's Passwordless Authentication",
           icon: "mdi-application-braces-outline",
           commit:
             "Lead the development of single device authentication on Linux, MacOS and Windows using Rust, C++ and Python",
@@ -202,7 +206,7 @@ export default {
           link: "https://allthenticate.net/authentication",
         },
         {
-          name: "Allthenticate Door Readers",
+          name: "Allthenticate's Smart Door Readers",
           icon: "mdi-application-braces-outline",
           commit:
             "Developed the firmware for Allthenticate's smart door readers with authenitcation over BLE",
@@ -213,7 +217,7 @@ export default {
           name: "ABle",
           icon: "mdi-package-variant",
           commit:
-            "Created a high performance async cross-platform bluetooth low energy framework at Allthenticate",
+            "Created a high performance asynchronous cross-platform bluetooth low energy framework at Allthenticate",
           last_modified: "2 Years Ago",
           link: "https://pypi.org/project/able/",
         },
@@ -221,7 +225,7 @@ export default {
           name: "CVE 2021-43400",
           icon: "mdi-bug-check-outline",
           commit:
-            "Found and fixed ause after free of a function pointer in Bluez, the linux bluetooth driver",
+            "Found and fixed a use after free of a function pointer in Bluez, the linux bluetooth driver",
           last_modified: "2 years ago",
           link: "https://nvd.nist.gov/vuln/detail/CVE-2021-43400",
         },
@@ -245,7 +249,7 @@ export default {
           name: "MagicRSVP",
           icon: "mdi-application-braces-outline",
           commit:
-            "Created a Python tool to RSVP hard-to-get Disneyland dining reservations",
+            "Created a Python tool to RSVP hard-to-get Disneyland dining reservations using Selenium and Cookie hijacking/borrowing",
           last_modified: "1 Month Ago",
           link: "https://github.com/Bernstern/MagicRSVP",
         },
@@ -253,7 +257,7 @@ export default {
           name: "Research ChatBot",
           icon: "mdi-application-braces-outline",
           commit:
-            "Made a nextjs chatbot to help with a friends research project that used MongoDB",
+            "Made a nextjs chatbot to help with a UCSB research project that used MongoDB",
           last_modified: "2 years ago",
           link: "https://github.com/Bernstern/pabs_research",
         },
