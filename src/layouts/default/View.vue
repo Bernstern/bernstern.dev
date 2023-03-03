@@ -73,13 +73,14 @@
               <img :src="n" class="pl-1">
             </template>
             </div>
-              <h2>Welcome!</h2>
-              <p>This is my portfolio site, I am in the process of adding more features to it but feel free to take a look around during development. While most of my background is not working with web development, it's always fun to try a new challenge. </p>
-              <br/>
-              <p>I started programming in 4th grade taking summer python and html classes, immediately I was hooked on the ability to make just about anything I could think of with code. Now I am working on ridding the world of passwords, keys, and smart cards with Allthenticate, a cybersecurity startup out of Santa Barbara, CA. </p>
-              <!-- <v-divider/>
-              <h2>In Progress</h2>
-              <p>In my free time I have been learning Rust, reading up on how to manage technical teams, and constantly trying to improve my Python skills. </p> -->
+            <template v-for="section in readme" :key="section">
+              <h2>{{ section.title }}</h2>
+              <v-divider />
+              <div class="pa-2">
+                  <p>{{ section.content }}</p>
+              </div>
+            </template>
+
             </v-container>
           </v-sheet>
         </v-col>
@@ -215,10 +216,20 @@ export default {
           name: "Merrick Campbell",
         },
       ],
-      readme: {
-        title: "Career",
-        main_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-      },
+      readme: [
+        {
+          title: "Welcome!",
+          content: "My name is Bernie Conrad (@bernstern) and this is my portfolio site. I am in the process of adding more features to it but feel free to take a look around during development.\nWhile most of my background is not working with web development, it's always fun to try a new challenge. I started programming in 4th grade taking summer python and html classes, immediately I was hooked on the ability to make just about anything I could think of with code. Now I am working on ridding the world of passwords, keys, and smart cards with Allthenticate, a cybersecurity startup out of Santa Barbara, CA. In my role I lead the development for Allthenticate's core products, our passwordless computer authentication and smart door readers.",
+        },
+        {
+          title: "Work In Progress",
+          content: "Right now, my main focus outside of work is developing a Flutter App to facilitate a draft for a LAN party I am hosting in May. In my free time I have been learning Rust, reading up on how to manage technical teams, and constantly trying to improve my Python skills. Shortly I am going to start preparing to recertify with AWS as my cloud practitioner certification is about to expire."
+        },
+        {
+          title: "Fun Facts",
+          content: "Right now I am planning a trip to Europe for the fall of 2023 to visit France and Germany, if you have any recommendations for places to visit or food to eat, please let me know!",
+        }
+      ],
       badges: [
         "https://img.shields.io/badge/deployment-passing-green?style=for-the-badge&logo=appveyor",
         "https://img.shields.io/badge/issues-0_open-green?style=for-the-badge&logo=appveyor",
