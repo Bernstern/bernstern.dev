@@ -1,7 +1,7 @@
 <template>
   <v-main>
     <v-container fluid class="align-center frame">
-      <v-row >
+      <v-row>
         <v-col cols="12" sm="9">
           <v-sheet rounded="lg" class="file-view">
             <v-container class="mgreybg">
@@ -52,35 +52,32 @@
               <v-divider />
             </template>
           </v-sheet>
-          <div  style="height: 3vh"></div>
+          <div style="height: 3vh"></div>
           <v-sheet rounded="lg" class="file-view">
             <v-container class="lgrey">
-              <v-row class="pa-2 align-center ">
+              <v-row class="pa-2 align-center">
                 <v-icon class="pr-2 pl-2">mdi-file-document-outline</v-icon>
-                <p class="pl-1 d-none d-sm-flex">
-                  README.md
-                </p>
+                <p class="pl-1 d-none d-sm-flex">README.md</p>
               </v-row>
             </v-container>
             <v-divider />
             <v-container class="lgrey pl-3">
-            <h1>
-              bernstern.dev
-            </h1>
-            <v-divider />
-            <div class="pa-2">
-            <template v-for="n in badges" :key="n">
-              <img :src="n" class="pl-1">
-            </template>
-            </div>
-            <template v-for="section in readme" :key="section">
-              <h2>{{ section.title }}</h2>
+              <h1>bernstern.dev</h1>
               <v-divider />
-              <div class="pa-2">
-                  <p>{{ section.content }}</p>
+              <div class="pt-2">
+                <template v-for="n in badges" :key="n">
+                  <img :src="n" class="pl-1" />
+                </template>
               </div>
-            </template>
-
+              <template v-for="section in readme" :key="section">
+                <div class="pt-3">
+                  <h2>{{ section.title }}</h2>
+                </div>
+                <v-divider />
+                <div class="pt-3">
+                  <p>{{ section.content }}</p>
+                </div>
+              </template>
             </v-container>
           </v-sheet>
         </v-col>
@@ -101,6 +98,14 @@
                 <a class="ml-2" href="https://www.linkedin.com/in/bernstern/"
                   >LinkedIn</a
                 >
+              </v-row>
+              <v-row class="ma-2 my-3">
+                <v-icon>mdi-link-variant</v-icon>
+                <a class="ml-2" href="https://github.com/Bernstern">Github</a>
+              </v-row>
+              <v-row class="ma-2 my-3">
+                <v-icon>mdi-link-variant</v-icon>
+                <a class="ml-2" href="mailto:root@bernstern.dev">Email Me</a>
               </v-row>
               <v-row class="ma-2">
                 <v-chip v-for="tag in tags" :key="tag" class="tag-chip ma-1">
@@ -219,23 +224,25 @@ export default {
       readme: [
         {
           title: "Welcome!",
-          content: "My name is Bernie Conrad (@bernstern) and this is my portfolio site. I am in the process of adding more features to it but feel free to take a look around during development.\nWhile most of my background is not working with web development, it's always fun to try a new challenge. I started programming in 4th grade taking summer python and html classes, immediately I was hooked on the ability to make just about anything I could think of with code. Now I am working on ridding the world of passwords, keys, and smart cards with Allthenticate, a cybersecurity startup out of Santa Barbara, CA. In my role I lead the development for Allthenticate's core products, our passwordless computer authentication and smart door readers.",
+          content:
+            "My name is Bernie Conrad (@bernstern) and this is my portfolio site. I am in the process of adding more features to it but feel free to take a look around during development.\nWhile most of my background is not working with web development, it's always fun to try a new challenge. I started programming in 4th grade taking summer python and html classes, immediately I was hooked on the ability to make just about anything I could think of with code. Now I am working on ridding the world of passwords, keys, and smart cards with Allthenticate, a cybersecurity startup out of Santa Barbara, CA. In my role I lead the development for Allthenticate's core products, our passwordless computer authentication and smart door readers.",
         },
         {
           title: "Work In Progress",
-          content: "Right now, my main focus outside of work is developing a Flutter App to facilitate a draft for a LAN party I am hosting in May. In my free time I have been learning Rust, reading up on how to manage technical teams, and constantly trying to improve my Python skills. Shortly I am going to start preparing to recertify with AWS as my cloud practitioner certification is about to expire."
+          content:
+            "Right now, my main focus outside of work is developing a Flutter App to facilitate a draft for a LAN party I am hosting in May. In my free time I have been learning Rust, reading up on how to manage technical teams, and constantly trying to improve my Python skills. Shortly I am going to start preparing to recertify with AWS as my cloud practitioner certification is about to expire.",
         },
         {
           title: "Fun Facts",
-          content: "Right now I am planning a trip to Europe for the fall of 2023 to visit France and Germany, if you have any recommendations for places to visit or food to eat, please let me know!",
-        }
+          content:
+            "Right now I am planning a trip to Europe for the fall of 2023 to visit France and Germany, if you have any recommendations for places to visit or food to eat, please let me know!",
+        },
       ],
       badges: [
         "https://img.shields.io/badge/deployment-passing-green?style=for-the-badge&logo=appveyor",
         "https://img.shields.io/badge/issues-0_open-green?style=for-the-badge&logo=appveyor",
         "https://img.shields.io/badge/passing_tests-0-red?style=for-the-badge&logo=appveyor",
         // "https://github-readme-stats.vercel.app/api?username=bernstern&theme=blue-green"
-
       ],
       files: [
         {
