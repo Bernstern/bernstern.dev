@@ -41,7 +41,15 @@
                 <v-col class="text-start lgrey" cols="8" sm="4">
                   <v-row class="align-center pl-4">
                     <v-icon class="pr-2">{{ n.icon }}</v-icon>
-                    <a :href="n.link">{{ n.name }}</a>
+                    <!-- If there is a link create an a tag otherwise just display the name -->
+                    <template v-if="n.link">
+                      <a :href="n.link">
+                        {{ n.name }}
+                      </a>
+                    </template>
+                    <template v-else>
+                      {{ n.name }}
+                    </template>
                   </v-row>
                 </v-col>
                 <v-col class="text-start dgrey d-none d-sm-flex" cols="6">
@@ -203,21 +211,33 @@ export default {
         "c++",
         "ble",
         "pam",
+        "go",
+        "iam",
         "windows authentication",
         "devops",
         "aws",
+        "azure",
+        "bash/fish",
+        "powershell",
+        "agile",
       ],
       contributors: [
         {
           username: "cspensky",
           image: "https://avatars.githubusercontent.com/u/2789577?v=4",
-          profile: "https://github.com/cspensky",
+          profile: "https://www.cspensky.info/",
           name: "Chad Spensky",
+        },
+        {
+          username: "giovannivigna",
+          image: "https://avatars.githubusercontent.com/u/9272002?v=4",
+          profile: "https://sites.cs.ucsb.edu/~vigna/",
+          name: "Giovanni Vigna",
         },
         {
           username: "mepix",
           image: "https://avatars.githubusercontent.com/u/13284555?v=4",
-          profile: "https://github.com/mepix",
+          profile: "https://merrickcampbell.com/",
           name: "Merrick Campbell",
         },
       ],
@@ -225,12 +245,12 @@ export default {
         {
           title: "Welcome!",
           content:
-            "My name is Bernie Conrad (@bernstern) and this is my portfolio site. I am in the process of adding more features to it but feel free to take a look around during development.\nWhile most of my background is not working with web development, it's always fun to try a new challenge. I started programming in 4th grade taking summer python and html classes, immediately I was hooked on the ability to make just about anything I could think of with code. Now I am working on ridding the world of passwords, keys, and smart cards with Allthenticate, a cybersecurity startup out of Santa Barbara, CA. In my role I lead the development for Allthenticate's core products, our passwordless computer authentication and smart door readers.",
+            "My name is Bernie Conrad (@bernstern) and this is my portfolio site. I am in the process of adding more features to it but feel free to take a look around during development.\nWhile most of my background is not working with web development, it's always fun to try a new challenge. I started programming in 4th grade taking summer python and html classes, immediately I was hooked on the ability to make just about anything I could think of with code. Now I am working on ridding the world of passwords, keys, and smart cards with Allthenticate, a cybersecurity startup out of Santa Barbara, CA. In my role I lead the development for Allthenticate's core products, our passwordless computer authentication and smart door readers as well as the companies DevOps and cloud infrastructure.",
         },
         {
           title: "Work In Progress",
           content:
-            "Right now, my main focus outside of work is developing a Flutter App to facilitate a draft for a LAN party I am hosting in May. In my free time I have been learning Rust, reading up on how to manage technical teams, and constantly trying to improve my Python skills. Shortly I am going to start preparing to recertify with AWS as my cloud practitioner certification is about to expire.",
+            "Right now, my main focus outside of work is developing a Flutter App to facilitate a draft for a LAN party I am hosting in May. In my free time I have been learning Rust and Go, reading up on how to manage technical teams, and constantly trying to improve my Python skills. Shortly I am going to start preparing to recertify with AWS as my cloud practitioner certification is about to expire.",
         },
         {
           title: "Fun Facts",
@@ -278,16 +298,30 @@ export default {
           name: "ABle",
           icon: "mdi-package-variant",
           commit:
-            "Created a high performance asynchronous cross-platform bluetooth low energy framework at Allthenticate",
-          last_modified: "2 Years Ago",
+            "Created a high performance open-source cross-platform Bluetooth Low Energy framework at Allthenticate",
+          last_modified: "Today",
           link: "https://pypi.org/project/able/",
+        },
+        {
+          name: "Gitlab Runner",
+          icon: "mdi-directions-fork",
+          commit:
+            "Maintained a private fork of Gitlab Runner for validation testing of Allthenticate's products",
+          last_modified: "1 Year Ago",
+        },
+        {
+          name: "Bluez",
+          icon: "mdi-directions-fork",
+          commit:
+            "Maintained a private fork of Bluez with added functionality focused on notifiying specific clients",
+          last_modified: "1 Year Ago",
         },
         {
           name: "CVE 2021-43400",
           icon: "mdi-bug-check-outline",
           commit:
-            "Found and fixed a use after free of a function pointer in Bluez, the linux bluetooth driver",
-          last_modified: "2 years ago",
+            "Found and fixed a use after free of a function pointer in Bluez, the Linux Bluetooth driver",
+          last_modified: "1 year ago",
           link: "https://nvd.nist.gov/vuln/detail/CVE-2021-43400",
         },
         {
@@ -310,7 +344,7 @@ export default {
           name: "MagicRSVP",
           icon: "mdi-application-braces-outline",
           commit:
-            "Created a Python tool to RSVP hard-to-get Disneyland dining reservations using Selenium and Cookie hijacking/borrowing",
+            "Created an open-source Python tool to RSVP dining reservations using Selenium and Cookie hijacking/borrowing",
           last_modified: "1 Month Ago",
           link: "https://github.com/Bernstern/MagicRSVP",
         },
