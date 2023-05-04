@@ -1,10 +1,12 @@
 // Plugins
 import vue from "@vitejs/plugin-vue";
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
+import { VitePluginRadar } from "vite-plugin-radar";
 
 // Utilities
 import { defineConfig } from "vite";
 import { fileURLToPath, URL } from "node:url";
+import { env } from "node:process";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -17,6 +19,11 @@ export default defineConfig({
       autoImport: true,
       styles: {
         configFile: "src/styles/settings.scss",
+      },
+    }),
+    VitePluginRadar({
+      analytics: {
+        id: env.ANALYTICS,
       },
     }),
   ],
